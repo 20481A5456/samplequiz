@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function result(){
+            var score=0;
+            if(document.getElementById('correct1').checked){
+                score+=10;
+            }
+            if(document.getElementById('correct2').checked){
+                score+=10;
+            }
+            if(document.getElementById('correct3').checked){
+                score+=10;
+            }
+            document.write("Your Score: " + score);
+        }
+    </script>
+</head>
+<body>
+    <h1>Quiz</h1><hr>
+    <form>
+        <p>Q1. What is HTML?</p>
+        <label><input type="radio" name="question1">Hanger Text Markup Language</label>
+        <label><input type="radio" name="question1" id="correct1">Hyper Text Markup Language</label>
+        <label><input type="radio" name="question1">Hanger Text Makeup Language</label>
+        <label><input type="radio" name="question1">Hyper Text Makeup Language</label>
+
+        <p>Q2. What is CSS?</p>
+        <label><input type="radio" name="question2" id="correct2">Cascading Style Sheet</label>
+        <label><input type="radio" name="question2">Cascade Style Sheet</label>
+        <label><input type="radio" name="question2">Cascadless Style Sheet</label>
+        <label><input type="radio" name="question2">Cascading Self Sheet</label>
+
+        <p>Q3. What is PHP?</p>
+        <label><input type="radio" name="question3">Preprocessing Hypertext</label>
+        <label><input type="radio" name="question3">Hypertext Process Penetration</label>
+        <label><input type="radio" name="question3" id="correct3">Hypertext Pre Processor</label>
+        <label><input type="radio" name="question3">Hypertext Premium Processor</label>
+
+        <input type="submit" name="submit" value="Submit Quiz" onclick="result()">
+    </form>
+</body>
+</html>
